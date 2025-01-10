@@ -69,7 +69,7 @@ export const GoogleGeminiEffect = ({
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
           />
           <Image
-            src="/tailwind CSS.png"
+            src="/tailwind.png"
             alt="Tailwind CSS"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
           />
