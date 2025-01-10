@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { Cover } from "./cover";
 import { Reveal } from "@/app/reveal";
+import Image from "next/image";
 
 const COLORS = ["#01efac", "#01cbae", "#2082a6", "#524096", "#5f2a84"];
 function Hero() {
@@ -20,7 +21,7 @@ function Hero() {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
   return (
     <motion.section
       style={{
@@ -33,7 +34,7 @@ function Hero() {
           <article className="text-center text-3xl mt-4 font-thin max-sm:text-xl">
             <Reveal>
               <h4>
-                Hello my name is M Rizki Arya Nanda <br /> I'm a
+                Hello my name is M Rizki Arya Nanda <br /> I&apos;m a
               </h4>
             </Reveal>
             <Cover>Front End Developer</Cover>
@@ -42,7 +43,7 @@ function Hero() {
           <aside>
             <div className="rounded mb-7">
         <Reveal>
-              <img
+              <Image
                 src="/kudeng.png"
                 alt=""
                 className="w-full max-w-xl mx-auto rounded-md "
