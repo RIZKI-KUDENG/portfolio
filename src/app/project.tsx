@@ -21,10 +21,10 @@ export const products = [
       "/project1.png",
   },
   {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
     thumbnail:
-      "/project1.png",
+      "/project2.png",
   },
   {
     title: "Loker Sukabumi Asik",
@@ -34,10 +34,10 @@ export const products = [
   },
 
   {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
     thumbnail:
-      "/project1.png",
+      "/project2.png",
   },
   {
     title: "Loker Sukabumi Asik",
@@ -46,41 +46,10 @@ export const products = [
       "/project1.png",
   },
   {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
     thumbnail:
-      "/project1.png",
-  },
-
-  {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
-    thumbnail:
-      "/project1.png",
-  },
-  {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
-    thumbnail:
-      "/project1.png",
-  },
-  {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
-    thumbnail:
-      "/project1.png",
-  },
-  {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
-    thumbnail:
-      "/project1.png",
-  },
-  {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
-    thumbnail:
-      "/project1.png",
+      "/project2.png",
   },
 
   {
@@ -90,16 +59,47 @@ export const products = [
       "/project1.png",
   },
   {
-    title: "Loker Sukabumi Asik",
-    link: "https://lokersukabumi-asik.vercel.app/",
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
     thumbnail:
-      "/project1.png",
+      "/project2.png",
   },
   {
     title: "Loker Sukabumi Asik",
     link: "https://lokersukabumi-asik.vercel.app/",
     thumbnail:
       "/project1.png",
+  },
+  {
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
+    thumbnail:
+      "/project2.png",
+  },
+  {
+    title: "Loker Sukabumi Asik",
+    link: "https://lokersukabumi-asik.vercel.app/",
+    thumbnail:
+      "/project1.png",
+  },
+
+  {
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
+    thumbnail:
+      "/project2.png",
+  },
+  {
+    title: "Loker Sukabumi Asik",
+    link: "https://lokersukabumi-asik.vercel.app/",
+    thumbnail:
+      "/project1.png",
+  },
+  {
+    title: "My Reservasi",
+    link: "https://myreservasi.netlify.app/",
+    thumbnail:
+      "/project2.png",
   },
   {
     title: "Loker Sukabumi Asik",

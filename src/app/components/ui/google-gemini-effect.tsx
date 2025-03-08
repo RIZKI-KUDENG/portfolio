@@ -57,26 +57,36 @@ export const GoogleGeminiEffect = ({
             src="/html.png"
             alt="HTML"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            height={100}
+            width={100}
           />
           <Image
             src="/css.png"
             alt="CSS"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            width={100}
+            height={100}
           />
           <Image
             src="/js.png"
             alt="JavaScript"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            height={100}
+            width={100}
           />
           <Image
             src="/Tailwind.png"
             alt="Tailwind CSS"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            width={100}
+            height={100}
           />
           <Image
             src="/react.png"
             alt="React"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            width={100}
+            height={100}
           />
         </div>
         <div className="flex flex-col space-y-4 items-end max-sm:space-y-1 max-md:space-y-2 max-lg:space-y-3">
@@ -84,26 +94,36 @@ export const GoogleGeminiEffect = ({
             src="/nextjs.webp"
             alt="Next.js"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            height={100}
+            width={100}
           />
           <Image
             src="/git.png"
             alt="Git"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            height={100}
+            width={100}
           />
           <Image
             src="/github.jpeg"
             alt="GitHub"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            width={100}
+            height={100}
           />
           <Image
             src="/bootstrap.png"
             alt="Bootstrap"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10 "
+            width={100}
+            height={100}
           />
           <Image
             src="/framer.png"
             alt="Framer"
             className="w-16 h-16 max-sm:w-4 max-sm:h-4 max-md:w-6 max-md:h-6 max-lg:w-8 max-lg:h-8 max-xl:w-10 max-xl:h-10"
+            height={100}
+            width={100}
           />
         </div>
       </div>
