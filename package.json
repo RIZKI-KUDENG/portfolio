@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@creativoma/liquid-glass": "^1.0.1",
     "@tabler/icons-react": "^3.26.0",
     "@tsparticles/engine": "^3.7.1",
     "@tsparticles/react": "^3.0.0",
@@ -19,7 +20,6 @@
     "next": "^15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
