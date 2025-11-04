@@ -2,16 +2,28 @@
 import Image from "next/image";
 import { LiquidGlass } from "@creativoma/liquid-glass";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+ useEffect(() => {
+        AOS.init({
+          duration: 500,
+          once: true, 
+        });
+        AOS.refresh(); 
+      }, []);
   return (
-    <div className="w-full">
+    <div className="w-full" data-aos="fade-up">
       <LiquidGlass
        tintColor="rgba(255, 255, 255, 0.2)"
         backdropBlur={3}
-        className="rounded-3xl md:p-8 border mt-2 md:mt-5 border-white/30 shadow-lg w-full md:w-3/4 mx-auto "
+        className="rounded-3xl md:p-8 border mt-2 md:mt-5 border-white/30 shadow-lg w-full md:w-3/4 mx-auto"
       >
-        <div className="flex justify-between items-center mt-1 max-sm:px-2">
+        <div className="flex justify-between items-center mt-1 max-sm:px-2" 
+              data-aos="zoom-in"
+        >
           <div className="flex justify-center  items-center">
             <Image
               src="/IMG_7257.jpg"
@@ -43,6 +55,7 @@ export default function Home() {
           turbulenceBaseFrequency="0.01 0.01"
           turbulenceSeed={5}
           className="text-center mt-2 md:mt-8 rounded-lg"
+          data-aos="zoom-in"
         >
           <h2 className="text-2xl md:text-6xl font-bold py-2">About Me</h2>
           <p className=" text-lg md:mt-3 p-2 hover:drop-shadow-[0_0_15px_rgba(0,0,0)]">
@@ -67,6 +80,7 @@ export default function Home() {
           turbulenceBaseFrequency="0.01 0.01"
           turbulenceSeed={5}
           className="text-center flex flex-col items-center mt-2 md:mt-8 rounded-lg"
+          data-aos="zoom-in"
         >
           <h2 className="text-center text-2xl md:text-6xl font-bold py-2">
             Projects
@@ -77,6 +91,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="flip-left"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Movie App BE</h2>
               <p className="">
@@ -89,6 +105,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="flip-left"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Loker Sukabumi Asik</h2>
               <p className="">
@@ -102,6 +120,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="flip-left"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Movie App FE</h2>
               <p className="">
@@ -113,6 +133,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="flip-left"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">More Projects Coming Soon</h2>
               <p className="">
@@ -128,6 +150,7 @@ export default function Home() {
           turbulenceBaseFrequency="0.01 0.01"
           turbulenceSeed={5}
           className="text-center flex flex-col items-center mt-2 md:mt-8 rounded-lg"
+          data-aos="zoom-in"
         >
           <h2 className="text-center text-2xl md:text-6xl font-bold py-2">
             Tech Stack
@@ -137,6 +160,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              data-aos="flip-left"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-2xl font-bold">Frontend</h2>
               {/* <p className="">Reactjs, Nextjs, Typescript, Tailwindcss</p> */}
@@ -147,6 +172,8 @@ export default function Home() {
               width={55}
               height={55}
               className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
                <Image
               src="/nextjs.png"
@@ -154,13 +181,17 @@ export default function Home() {
               width={55}
               height={55}
               className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
               <Image
               src="/tailwindcss.webp"
               alt="Tech Stack"
-              width={50}
-              height={50}
+              width={55}
+              height={55}
               className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
               <Image
               src="/redux.webp"
@@ -168,6 +199,8 @@ export default function Home() {
               width={40}
               height={40}
               className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
              </div>
             </LiquidGlass>
@@ -175,6 +208,8 @@ export default function Home() {
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              data-aos="flip-right"
+              data-aos-duration="1500"
             >
               <h2 className="mb-4 text-2xl font-bold">Backend</h2>
               {/* <p className="">Nodejs, Expressjs, PostgreSQL</p> */}
@@ -185,6 +220,8 @@ export default function Home() {
               width={50}
               height={50}
               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
               <Image
               src="/express.svg"
@@ -192,6 +229,8 @@ export default function Home() {
               width={50}
               height={50}
               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               />
               <Image
               src="/postgresql.svg" 
@@ -199,12 +238,16 @@ export default function Home() {
               width={50}
               height={50}
               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               /> <Image
               src="/prisma.svg" 
               alt="Tech Stack"
               width={50}
               height={50}
               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
               /> 
                <Image
                src='/sequelize2.svg'
@@ -212,6 +255,8 @@ export default function Home() {
                width={50}
                height={50}
                className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+               data-aos="zoom-in"
+              data-aos-duration="2000"
                />
                <Image
                src='/myssql.png'
@@ -219,6 +264,9 @@ export default function Home() {
                width={50}
                height={50}
                className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+
+               data-aos="zoom-in"
+              data-aos-duration="2000"
                />
               </div>
             </LiquidGlass> 
@@ -232,6 +280,8 @@ export default function Home() {
           turbulenceBaseFrequency="0.01 0.01"
           turbulenceSeed={5}
           className="text-center flex flex-col items-center py-2  mt-2 md:mt-8 rounded-lg"
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <h2 className="text-center text-2xl md:text-6xl font-bold py-2">
             Contact
