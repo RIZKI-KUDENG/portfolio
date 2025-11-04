@@ -7,10 +7,9 @@ export default function Home() {
   return (
     <div className="w-full">
       <LiquidGlass
-        backdropBlur={30}
-        tintColor="rgba(255,255,255,0.15)"
-        displacementScale={150}
-        className="rounded-3xl md:p-8 border mt-2 md:mt-5 border-white/30 shadow-lg w-full md:w-3/4 mx-auto"
+       tintColor="rgba(255, 255, 255, 0.2)"
+        backdropBlur={3}
+        className="rounded-3xl md:p-8 border mt-2 md:mt-5 border-white/30 shadow-lg w-full md:w-3/4 mx-auto "
       >
         <div className="flex justify-between items-center mt-1 max-sm:px-2">
           <div className="flex justify-center  items-center">
@@ -46,7 +45,7 @@ export default function Home() {
           className="text-center mt-2 md:mt-8 rounded-lg"
         >
           <h2 className="text-2xl md:text-6xl font-bold py-2">About Me</h2>
-          <p className=" text-lg md:mt-3 p-2">
+          <p className=" text-lg md:mt-3 p-2 hover:drop-shadow-[0_0_15px_rgba(0,0,0)]">
             I am a Fullstack Developer passionate about solving business
             problems with technology. What sets me apart is my 5-year career
             foundation in sales. This background has trained me to be an
@@ -74,9 +73,10 @@ export default function Home() {
           </h2>
           <div className="p-2 grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <LiquidGlass
+            as='div'
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
-              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Movie App BE</h2>
               <p className="">
@@ -88,7 +88,7 @@ export default function Home() {
             <LiquidGlass
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
-              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Loker Sukabumi Asik</h2>
               <p className="">
@@ -101,7 +101,7 @@ export default function Home() {
             <LiquidGlass
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
-              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">Movie App FE</h2>
               <p className="">
@@ -112,7 +112,7 @@ export default function Home() {
             <LiquidGlass
               backdropBlur={2}
               tintColor="rgba(255, 255, 255, 0.3)"
-              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
             >
               <h2 className="mb-4 text-lg md:text-2xl font-bold">More Projects Coming Soon</h2>
               <p className="">
@@ -140,7 +140,36 @@ export default function Home() {
             >
               <h2 className="mb-4 text-2xl font-bold">Frontend</h2>
               {/* <p className="">Reactjs, Nextjs, Typescript, Tailwindcss</p> */}
-              
+             <div className="grid grid-cols-2 gap-2 place-items-center">
+               <Image
+              src="/react.png"
+              alt="Tech Stack"
+              width={55}
+              height={55}
+              className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+               <Image
+              src="/nextjs.png"
+              alt="Tech Stack"
+              width={55}
+              height={55}
+              className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+              <Image
+              src="/tailwindcss.webp"
+              alt="Tech Stack"
+              width={50}
+              height={50}
+              className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+              <Image
+              src="/redux.webp"
+              alt="Tech Stack"
+              width={40}
+              height={40}
+              className="rounded-lg w-auto h-auto hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+             </div>
             </LiquidGlass>
             <LiquidGlass
               backdropBlur={2}
@@ -148,7 +177,50 @@ export default function Home() {
               className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
             >
               <h2 className="mb-4 text-2xl font-bold">Backend</h2>
-              <p className="">Nodejs, Expressjs, PostgreSQL</p>
+              {/* <p className="">Nodejs, Expressjs, PostgreSQL</p> */}
+              <div className="grid grid-cols-3 gap-2 place-items-center">
+               <Image
+              src="/nodejs.svg" 
+              alt="Tech Stack"
+              width={50}
+              height={50}
+              className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+              <Image
+              src="/express.svg"
+              alt="Tech Stack"
+              width={50}
+              height={50}
+              className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              />
+              <Image
+              src="/postgresql.svg" 
+              alt="Tech Stack"
+              width={50}
+              height={50}
+              className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              /> <Image
+              src="/prisma.svg" 
+              alt="Tech Stack"
+              width={50}
+              height={50}
+              className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+              /> 
+               <Image
+               src='/sequelize2.svg'
+               alt="Tech Stack"
+               width={50}
+               height={50}
+               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+               />
+               <Image
+               src='/myssql.png'
+               alt="Tech Stack"
+               width={50}
+               height={50}
+               className="rounded-lg hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
+               />
+              </div>
             </LiquidGlass> 
           </div>
         </LiquidGlass>
@@ -159,7 +231,7 @@ export default function Home() {
           displacementScale={200}
           turbulenceBaseFrequency="0.01 0.01"
           turbulenceSeed={5}
-          className="text-center flex flex-col items-center mt-2 md:mt-8 rounded-lg"
+          className="text-center flex flex-col items-center py-2  mt-2 md:mt-8 rounded-lg"
         >
           <h2 className="text-center text-2xl md:text-6xl font-bold py-2">
             Contact
@@ -172,7 +244,8 @@ export default function Home() {
             >
               <h2 className="mb-4 text-2xl font-bold">Email</h2>
               <p className="">
-                rizki.kudeng[at]gmail.com
+                rizkiarya0611
+                <span className="underline"> @gmail.com</span>
               </p>
             </LiquidGlass>
             <LiquidGlass
@@ -183,6 +256,26 @@ export default function Home() {
               <h2 className="mb-4 text-2xl font-bold">Github</h2>
               <p className="">
                 <Link href="https://github.com/RIZKI-KUDENG" target="_blank" className="underline">Click here to see the code</Link>
+              </p>
+            </LiquidGlass>
+            <LiquidGlass
+              backdropBlur={2}
+              tintColor="rgba(255, 255, 255, 0.3)"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+            >
+              <h2 className="mb-4 text-2xl font-bold">Linkedin</h2>
+              <p className="">
+                <Link href="https://www.linkedin.com/in/m-rizki-arya-nanda-8867b2228/" target="_blank" className="underline">Click here to see my profile</Link>
+              </p>
+            </LiquidGlass>
+             <LiquidGlass
+              backdropBlur={2}
+              tintColor="rgba(255, 255, 255, 0.3)"
+              className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out"
+            >
+              <h2 className="mb-4 text-2xl font-bold">Instagram</h2>
+              <p className="">
+                <Link href="https://www.instagram.com/kudeeng/" target="_blank" className="underline">Click here to see my profile</Link>
               </p>
             </LiquidGlass>
           </div>
