@@ -25,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative text-gray-950`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden text-gray-950`}
       >
         <div 
-          className="bg-[url('/bg2.jpg')] bg-cover bg-center bg-fixed fixed inset-0 z-[-1] blur-sm opacity-50"
+          className="bg-[url('/bg2.jpg')] bg-cover bg-center bg-fixed fixed inset-0 z-0 blur-sm opacity-50"
         />
         {children}
       </body>
