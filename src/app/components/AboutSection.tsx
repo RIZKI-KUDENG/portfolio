@@ -18,7 +18,9 @@ export default function AboutSection({ bahasa }: { bahasa: boolean }) {
           Node.js/Express.js dengan database PostgreSQL/MySql. Saya mencari
           peluang untuk bergabung dengan tim yang kolaboratif di mana saya dapat
           berkontribusi, belajar, dan menerapkan keterampilan teknis serta
-          interpersonal saya untuk menciptakan produk yang berdampak.
+          interpersonal saya untuk menciptakan produk yang berdampak. Proyek
+          terbaru saya, Inspage, adalah bukti bagaimana saya menggabungkan
+          wawasan bisnis (analitik pengguna) dengan performa teknis tinggi.
         </p>
       ) : (
         <p className="text-lg md:mt-3 p-4 hover:drop-shadow-[0_0_15px_rgba(0,0,0)]">
@@ -31,7 +33,9 @@ export default function AboutSection({ bahasa }: { bahasa: boolean }) {
           <br />
           Technically, I specialize in the JavaScript ecosystem, building
           end-to-end applications using Reactjs and Node.js/Express.js with
-          PostgreSQL/MySql databases.
+          PostgreSQL/MySql databases. My latest project, Inspage, is a testament
+          to how I combine business insights (user analytics) with high
+          technical performance.
         </p>
       )}
     </SectionWrapper>

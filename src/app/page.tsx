@@ -10,7 +10,7 @@ import TechStackSection from "./components/TechStackSection";
 import ContactSection from "./components/ContactSection";
 
 export default function Home() {
-  const [bahasa, setBahasa] = useState(true);
+  const [bahasa, setBahasa] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 500, once: true });

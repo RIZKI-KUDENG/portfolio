@@ -2,71 +2,130 @@
 import { LiquidGlass } from "@creativoma/liquid-glass";
 import Link from "next/link";
 import SectionWrapper from "./SectionWrapper";
+import { ExternalLink, Github } from "lucide-react"; 
 
-const projects = [
+// Data Project Bahasa Inggris
+type Project = {
+  title: string;
+  desc: string;
+  link?: string;
+  repo?: string;
+  tags: string[];
+};
+const projects : Project[] = [
+  {
+    title: "Inspage (SaaS Platform)",
+    desc: "A production-ready Link-in-Bio platform featuring comprehensive Analytics, Drag-and-Drop customization, and High-Performance caching using Redis. Built for scalability.",
+    link: "https://inspage.vercel.app", 
+    repo: "https://github.com/RIZKI-KUDENG/linkhub",
+    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"]
+  },
   {
     title: "Movie App BE",
-    desc: "Backend project for Movie App built with Node.js, Express.js, and MySQL. Using Sequelize ORM, JWT, and more.",
-    link: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
+    desc: "Robust Backend for Movie App built with Node.js, Express.js, and MySQL. Features authentication via JWT and complex queries using Sequelize ORM.",
+    repo: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
+    tags: ["Express.js", "MySQL", "Sequelize"]
   },
   {
     title: "Job Finder",
-    desc: "Job search project for Sukabumi built with Next.js, TypeScript, and Tailwind CSS.",
+    desc: "Job search aggregator for Sukabumi region focused on performance and SEO, built with Next.js and TypeScript.",
     link: "https://lokersukabumi-asik.vercel.app/",
+    tags: ["Next.js", "TypeScript", "SEO"]
   },
   {
     title: "Movie App FE",
-    desc: "Frontend Movie App built with React, Tailwind CSS, React Router, and Redux Toolkit.",
-    link: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
-  },
-  {
-    title: "More Projects Coming Soon",
-    desc: "Still learning and working on it.",
+    desc: "Interactive Frontend Movie App offering seamless UX using React, Redux Toolkit for state management, and Tailwind CSS.",
+    repo: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
+    tags: ["React", "Redux", "Tailwind"]
   },
 ];
-const projectId = [
+
+
+const projectId : Project[] = [
+  {
+    title: "LinkHub (Platform SaaS)",
+    desc: "Platform Link-in-Bio skala produksi dengan fitur Analitik lengkap, kustomisasi Drag-and-Drop, dan caching performa tinggi menggunakan Redis.",
+    link: "https://inspage.vercel.app", 
+    repo: "https://github.com/RIZKI-KUDENG/linkhub",
+    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"]
+  },
   {
     title: "Aplikasi Film BE",
-    desc: "Proyek backend untuk Aplikasi Film yang dibuat dengan Node.js, Express.js, dan MySQL. Menggunakan Sequelize ORM, JWT, dan lain-lain.",
-    link: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
+    desc: "Backend yang kuat untuk Aplikasi Film, dibangun dengan Node.js & Express. Menggunakan JWT untuk keamanan dan Sequelize ORM untuk manajemen database.",
+    repo: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
+    tags: ["Express.js", "MySQL", "Sequelize"]
   },
   {
     title: "Pencari Pekerjaan",
-    desc: "Proyek pencarian pekerjaan untuk Sukabumi yang dibuat dengan Next.js, TypeScript, dan Tailwind CSS.",
+    desc: "Portal pencarian kerja untuk wilayah Sukabumi. Fokus pada kecepatan akses dan SEO menggunakan Next.js.",
     link: "https://lokersukabumi-asik.vercel.app/",
+    tags: ["Next.js", "TypeScript", "SEO"]
   },
   {
     title: "Aplikasi Film FE",
-    desc: "Aplikasi Film (bagian) frontend yang dibuat dengan React, Tailwind CSS, React Router, dan Redux Toolkit.",
-    link: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
-  },
-  {
-    title: "Proyek Lainnya Segera Hadir",
-    desc: "Masih belajar dan sedang mengerjakannya.",
+    desc: "Frontend aplikasi film yang interaktif dengan UX mulus, menggunakan React, Redux Toolkit, dan Tailwind CSS.",
+    repo: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
+    tags: ["React", "Redux", "Tailwind"]
   },
 ];
 
 export default function ProjectsSection({ bahasa }: { bahasa: boolean }) {
-    const displayedProject = bahasa ? projectId : projects
+  const displayedProject = bahasa ? projectId : projects;
+
   return (
-    <SectionWrapper title={bahasa ? "Proyek" : "Projects"}>
-      <div className="p-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <SectionWrapper title={bahasa ? "Proyek Unggulan" : "Featured Projects"}>
+      <div className="p-2 grid grid-cols-1 md:grid-cols-2 gap-6">
         {displayedProject.map((p, i) => (
           <LiquidGlass
             key={i}
-            backdropBlur={2}
-            tintColor="rgba(255, 255, 255, 0.3)"
-            className="max-w-md rounded-xl p-6 hover:scale-110 transition duration-300 ease-in-out hover:drop-shadow-[0_0_15px_rgba(0,0,0)]"
-            data-aos="flip-left"
-            data-aos-duration="1500"
+            backdropBlur={4}
+            tintColor="rgba(255, 255, 255, 0.15)"
+            className="flex flex-col h-full rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl text-left"
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
           >
-            <h2 className="mb-4 text-lg md:text-2xl font-bold">{p.title}</h2>
-            <p className="mb-2">{p.desc}</p>
-            {p.link && (
-              <Link href={p.link} target="_blank" className="underline">
-                {bahasa ? "Klik disini untuk melihatnya" : "Click here to see"}
-              </Link>
-            )}
+            {/* Project Title */}
+            <div className="flex justify-between items-start mb-3">
+              <h2 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
+                {p.title}
+              </h2>
+            </div>
+
+            {/* Description */}
+            <p className="mb-6 text-gray-700 text-sm leading-relaxed flex-grow">
+              {p.desc}
+            </p>
+
+
+            <div className="flex flex-wrap gap-2 mb-6">
+              {p.tags?.map((tag, idx) => (
+                <span key={idx} className="px-2 py-1 text-[10px] font-semibold bg-white/40 rounded-md border border-white/30 text-gray-800">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Links */}
+            <div className="flex gap-4 mt-auto">
+              {p.link && (
+                <Link 
+                  href={p.link} 
+                  target="_blank" 
+                  className="flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-900 transition-colors"
+                >
+                  <ExternalLink/>
+                </Link>
+              )}
+              {p.repo && (
+                <Link 
+                  href={p.repo} 
+                  target="_blank" 
+                  className="flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-black transition-colors"
+                >
+                  <Github/>
+                </Link>
+              )}
+            </div>
           </LiquidGlass>
         ))}
       </div>
