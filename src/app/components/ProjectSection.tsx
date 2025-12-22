@@ -2,7 +2,7 @@
 import { LiquidGlass } from "@creativoma/liquid-glass";
 import Link from "next/link";
 import SectionWrapper from "./SectionWrapper";
-import { ExternalLink, Github } from "lucide-react"; 
+import { ExternalLink, Github } from "lucide-react";
 
 // Data Project Bahasa Inggris
 type Project = {
@@ -12,60 +12,75 @@ type Project = {
   repo?: string;
   tags: string[];
 };
-const projects : Project[] = [
+const projects: Project[] = [
   {
     title: "Inspage (SaaS Platform)",
     desc: "A production-ready Link-in-Bio platform featuring comprehensive Analytics, Drag-and-Drop customization, and High-Performance caching using Redis. Built for scalability.",
-    link: "https://inspage.vercel.app", 
+    link: "https://inspage.vercel.app",
     repo: "https://github.com/RIZKI-KUDENG/linkhub",
-    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"]
+    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"],
+  },
+  {
+    title: "QR Ordering & POS",
+    desc: "An end-to-end digital solution designed to streamline restaurant operations. Built with a Monorepo architecture, it empowers customers to order directly from their tables, synchronizes orders to the kitchen instantly, and simplifies transaction management and shift tracking for cashiers. Eliminates manual errors and accelerates service speed.",
+    repo: "https://github.com/RIZKI-KUDENG/QR-ordering-POS",
+    tags: [
+      "Next.js 16",
+      "Zustand",
+      "Tailwind",
+      "Monorepo",
+      "Prisma",
+      "PostgreSQL",
+      "Shadcn/UI",
+    ],
   },
   {
     title: "Movie App BE",
     desc: "Robust Backend for Movie App built with Node.js, Express.js, and MySQL. Features authentication via JWT and complex queries using Sequelize ORM.",
     repo: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
-    tags: ["Express.js", "MySQL", "Sequelize"]
+    tags: ["Express.js", "MySQL", "Sequelize"],
   },
   {
     title: "Job Finder",
     desc: "Job search aggregator for Sukabumi region focused on performance and SEO, built with Next.js and TypeScript.",
     link: "https://lokersukabumi-asik.vercel.app/",
-    tags: ["Next.js", "TypeScript", "SEO"]
-  },
-  {
-    title: "Movie App FE",
-    desc: "Interactive Frontend Movie App offering seamless UX using React, Redux Toolkit for state management, and Tailwind CSS.",
-    repo: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
-    tags: ["React", "Redux", "Tailwind"]
+    tags: ["Next.js", "TypeScript", "SEO"],
   },
 ];
 
-
-const projectId : Project[] = [
+const projectId: Project[] = [
   {
     title: "LinkHub (Platform SaaS)",
     desc: "Platform Link-in-Bio skala produksi dengan fitur Analitik lengkap, kustomisasi Drag-and-Drop, dan caching performa tinggi menggunakan Redis.",
-    link: "https://inspage.vercel.app", 
+    link: "https://inspage.vercel.app",
     repo: "https://github.com/RIZKI-KUDENG/linkhub",
-    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"]
+    tags: ["Next.js 16", "Redis", "Prisma", "PostgreSQL"],
+  },
+  {
+    title: "QR Ordering & POS",
+    desc: "Solusi digital end-to-end untuk efisiensi operasional restoran. Dibangun dengan arsitektur Monorepo, aplikasi ini memungkinkan pelanggan memesan langsung dari meja, menyinkronkan pesanan ke dapur secara instan, dan memudahkan kasir dalam manajemen transaksi serta pelacakan shift. Mengeliminasi kesalahan manual dan mempercepat layanan.",
+    repo: "https://github.com/RIZKI-KUDENG/QR-ordering-POS",
+    tags: [
+      "Next.js 16",
+      "Zustand",
+      "Tailwind",
+      "Monorepo",
+      "Prisma",
+      "PostgreSQL",
+      "Shadcn/UI",
+    ],
   },
   {
     title: "Aplikasi Film BE",
     desc: "Backend yang kuat untuk Aplikasi Film, dibangun dengan Node.js & Express. Menggunakan JWT untuk keamanan dan Sequelize ORM untuk manajemen database.",
     repo: "https://github.com/RIZKI-KUDENG/movie-app-advbe",
-    tags: ["Express.js", "MySQL", "Sequelize"]
+    tags: ["Express.js", "MySQL", "Sequelize"],
   },
   {
     title: "Pencari Pekerjaan",
     desc: "Portal pencarian kerja untuk wilayah Sukabumi. Fokus pada kecepatan akses dan SEO menggunakan Next.js.",
     link: "https://lokersukabumi-asik.vercel.app/",
-    tags: ["Next.js", "TypeScript", "SEO"]
-  },
-  {
-    title: "Aplikasi Film FE",
-    desc: "Frontend aplikasi film yang interaktif dengan UX mulus, menggunakan React, Redux Toolkit, dan Tailwind CSS.",
-    repo: "https://github.com/RIZKI-KUDENG/CHILL-MOVIE-v4/tree/withservice",
-    tags: ["React", "Redux", "Tailwind"]
+    tags: ["Next.js", "TypeScript", "SEO"],
   },
 ];
 
@@ -96,10 +111,12 @@ export default function ProjectsSection({ bahasa }: { bahasa: boolean }) {
               {p.desc}
             </p>
 
-
             <div className="flex flex-wrap gap-2 mb-6">
               {p.tags?.map((tag, idx) => (
-                <span key={idx} className="px-2 py-1 text-[10px] font-semibold bg-white/40 rounded-md border border-white/30 text-gray-800">
+                <span
+                  key={idx}
+                  className="px-2 py-1 text-[10px] font-semibold bg-white/40 rounded-md border border-white/30 text-gray-800"
+                >
                   {tag}
                 </span>
               ))}
@@ -108,21 +125,21 @@ export default function ProjectsSection({ bahasa }: { bahasa: boolean }) {
             {/* Links */}
             <div className="flex gap-4 mt-auto">
               {p.link && (
-                <Link 
-                  href={p.link} 
-                  target="_blank" 
+                <Link
+                  href={p.link}
+                  target="_blank"
                   className="flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-900 transition-colors"
                 >
-                  <ExternalLink/>
+                  <ExternalLink />
                 </Link>
               )}
               {p.repo && (
-                <Link 
-                  href={p.repo} 
-                  target="_blank" 
+                <Link
+                  href={p.repo}
+                  target="_blank"
                   className="flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-black transition-colors"
                 >
-                  <Github/>
+                  <Github />
                 </Link>
               )}
             </div>
