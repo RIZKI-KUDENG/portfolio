@@ -32,6 +32,7 @@ const projects: Project[] = [
       "Prisma",
       "PostgreSQL",
       "Shadcn/UI",
+      "Socket.io",
     ],
   },
   {
@@ -68,6 +69,7 @@ const projectId: Project[] = [
       "Prisma",
       "PostgreSQL",
       "Shadcn/UI",
+      "Socket.io",
     ],
   },
   {
